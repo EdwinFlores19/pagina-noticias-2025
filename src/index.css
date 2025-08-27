@@ -2,20 +2,20 @@
    ESTILOS BASE - NOTICIAS HOY
    ========================================================================== */
 
-/* Importar Tailwind CSS */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Importar Tailwind CSS: Estas directivas importan las capas base, de componentes y de utilidades de Tailwind CSS. */
+@tailwind base; /* Incluye los estilos base de Tailwind, como resets de CSS. */
+@tailwind components; /* Incluye las clases de componentes de Tailwind. */
+@tailwind utilities; /* Incluye las clases de utilidades de Tailwind. */
 
-/* Variables CSS personalizadas */
+/* Variables CSS personalizadas: Definen propiedades CSS reutilizables. */
 :root {
   /* Colores principales */
-  --primary-blue: #2563eb;
-  --primary-purple: #7c3aed;
-  --secondary-orange: #f97316;
-  --secondary-red: #ef4444;
+  --primary-blue: #2563eb; /* Azul primario. */
+  --primary-purple: #7c3aed; /* Morado primario. */
+  --secondary-orange: #f97316; /* Naranja secundario. */
+  --secondary-red: #ef4444; /* Rojo secundario. */
   
-  /* Grises */
+  /* Grises: Paleta de colores grises para diferentes tonalidades. */
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -27,17 +27,17 @@
   --gray-800: #1f2937;
   --gray-900: #111827;
   
-  /* Sombras */
+  /* Sombras: Definiciones de sombras para elementos. */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   
-  /* Tipografía */
+  /* Tipografía: Fuente principal de la aplicación. */
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  /* Animaciones */
+  /* Animaciones: Duraciones de transición predefinidas. */
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 250ms ease-in-out;
   --transition-slow: 350ms ease-in-out;
@@ -47,157 +47,157 @@
    RESET Y CONFIGURACIÓN BASE
    ========================================================================== */
 
-/* Scroll suave */
+/* Scroll suave: Habilita el desplazamiento suave al navegar a anclas. */
 html {
   scroll-behavior: smooth;
 }
 
-/* Configuración del body */
+/* Configuración del body: Estilos globales para el cuerpo del documento. */
 body {
-  font-family: var(--font-inter);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  font-family: var(--font-inter); /* Aplica la fuente Inter definida en las variables. */
+  line-height: 1.6; /* Establece la altura de línea para una mejor legibilidad. */
+  -webkit-font-smoothing: antialiased; /* Mejora el suavizado de fuentes en navegadores WebKit. */
+  -moz-osx-font-smoothing: grayscale; /* Mejora el suavizado de fuentes en navegadores basados en Gecko. */
+  text-rendering: optimizeLegibility; /* Optimiza el renderizado del texto para legibilidad. */
 }
 
-/* Selección de texto personalizada */
+/* Selección de texto personalizada: Estiliza el texto seleccionado por el usuario. */
 ::selection {
-  background-color: rgba(37, 99, 235, 0.2);
-  color: var(--gray-900);
+  background-color: rgba(37, 99, 235, 0.2); /* Color de fondo al seleccionar texto. */
+  color: var(--gray-900); /* Color del texto seleccionado. */
 }
 
 ::-moz-selection {
-  background-color: rgba(37, 99, 235, 0.2);
-  color: var(--gray-900);
+  background-color: rgba(37, 99, 235, 0.2); /* Color de fondo al seleccionar texto (para Firefox). */
+  color: var(--gray-900); /* Color del texto seleccionado (para Firefox). */
 }
 
 /* ==========================================================================
    UTILIDADES PERSONALIZADAS
    ========================================================================== */
 
-/* Ocultar elementos visualmente pero mantenerlos accesibles */
+/* Ocultar elementos visualmente pero mantenerlos accesibles para lectores de pantalla. */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  position: absolute; /* Posicionamiento absoluto para sacarlo del flujo normal. */
+  width: 1px; /* Ancho mínimo. */
+  height: 1px; /* Alto mínimo. */
+  padding: 0; /* Sin padding. */
+  margin: -1px; /* Margen negativo para evitar ocupar espacio. */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde. */
+  clip: rect(0, 0, 0, 0); /* Recorta el elemento a un rectángulo de 0 tamaño. */
+  white-space: nowrap; /* Evita el salto de línea. */
+  border: 0; /* Sin borde. */
 }
 
-/* Mostrar elementos sr-only cuando tienen focus */
+/* Mostrar elementos sr-only cuando tienen focus: Útil para enlaces de "saltar al contenido". */
 .focus\:not-sr-only:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
+  position: static; /* Vuelve a la posición normal. */
+  width: auto; /* Ancho automático. */
+  height: auto; /* Alto automático. */
+  padding: 0; /* Sin padding. */
+  margin: 0; /* Sin margen. */
+  overflow: visible; /* Muestra el contenido. */
+  clip: auto; /* Deshace el recorte. */
+  white-space: normal; /* Permite el salto de línea. */
 }
 
-/* Truncar texto en múltiples líneas */
+/* Truncar texto en múltiples líneas: Utilidades para limitar el texto a un número específico de líneas. */
 .line-clamp-1 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  overflow: hidden; /* Oculta el texto que se desborda. */
+  display: -webkit-box; /* Habilita el modelo de caja flexible de WebKit. */
+  -webkit-box-orient: vertical; /* Orientación vertical para el truncamiento. */
+  -webkit-line-clamp: 1; /* Limita el texto a 1 línea. */
 }
 
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2; /* Limita el texto a 2 líneas. */
 }
 
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 3; /* Limita el texto a 3 líneas. */
 }
 
 /* ==========================================================================
    COMPONENTES REUTILIZABLES
    ========================================================================== */
 
-/* Botones con gradientes animados */
+/* Botones con gradientes animados: Estilos para botones con un fondo de gradiente animado. */
 .btn-gradient {
-  position: relative;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-  background-size: 200% 200%;
-  animation: gradientShift 3s ease infinite;
-  transition: all var(--transition-normal);
+  position: relative; /* Establece el contexto de posicionamiento. */
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); /* Gradiente de fondo. */
+  background-size: 200% 200%; /* Tamaño del fondo para la animación. */
+  animation: gradientShift 3s ease infinite; /* Aplica la animación de cambio de gradiente. */
+  transition: all var(--transition-normal); /* Transición suave para propiedades. */
 }
 
 .btn-gradient:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-xl);
-  animation-duration: 1s;
+  transform: translateY(-2px); /* Ligero desplazamiento hacia arriba al pasar el ratón. */
+  box-shadow: var(--shadow-xl); /* Aplica una sombra más grande al pasar el ratón. */
+  animation-duration: 1s; /* Acelera la animación al pasar el ratón. */
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; } /* Posición inicial del fondo. */
+  50% { background-position: 100% 50%; } /* Posición media del fondo. */
+  100% { background-position: 0% 50%; } /* Vuelve a la posición inicial. */
 }
 
-/* Cards con efectos hover mejorados */
+/* Cards con efectos hover mejorados: Estilos para tarjetas con efectos de elevación y sombra al pasar el ratón. */
 .card-hover {
-  transition: all var(--transition-normal);
-  transform: translateZ(0); /* Hardware acceleration */
+  transition: all var(--transition-normal); /* Transición suave para propiedades. */
+  transform: translateZ(0); /* Hardware acceleration: Fuerza la aceleración por GPU para animaciones más suaves. */
 }
 
 .card-hover:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-2xl);
+  transform: translateY(-8px) scale(1.02); /* Desplazamiento hacia arriba y ligero aumento de tamaño al pasar el ratón. */
+  box-shadow: var(--shadow-2xl); /* Aplica una sombra más grande al pasar el ratón. */
 }
 
-/* Efectos de loading skeleton */
+/* Efectos de loading skeleton: Estilos para un efecto de esqueleto de carga. */
 .skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: loading 1.5s infinite;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); /* Gradiente para el efecto de brillo. */
+  background-size: 200% 100%; /* Tamaño del fondo para la animación. */
+  animation: loading 1.5s infinite; /* Aplica la animación de carga. */
 }
 
 @keyframes loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% { background-position: 200% 0; } /* Posición inicial del fondo. */
+  100% { background-position: -200% 0; } /* Posición final del fondo. */
 }
 
 /* ==========================================================================
    MEJORAS DE ACCESIBILIDAD
    ========================================================================== */
 
-/* Focus visible mejorado */
-.focus-visible:focus-visible,
+/* Focus visible mejorado: Estilos para indicar el elemento enfocado por teclado. */
+.focus-visible:focus-visible, /* Pseudo-clase para navegadores modernos. */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
-  outline: 2px solid var(--primary-blue);
-  outline-offset: 2px;
-  border-radius: 4px;
+  outline: 2px solid var(--primary-blue); /* Contorno azul sólido. */
+  outline-offset: 2px; /* Desplazamiento del contorno. */
+  border-radius: 4px; /* Bordes redondeados para el contorno. */
 }
 
-/* Reducir movimiento para usuarios con preferencias de accesibilidad */
+/* Reducir movimiento para usuarios con preferencias de accesibilidad: Deshabilita animaciones para usuarios que lo prefieren. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important; /* Reduce la duración de las animaciones a casi cero. */
+    animation-iteration-count: 1 !important; /* Limita las animaciones a una sola iteración. */
+    transition-duration: 0.01ms !important; /* Reduce la duración de las transiciones a casi cero. */
+    scroll-behavior: auto !important; /* Deshabilita el scroll suave. */
   }
   
   .btn-gradient {
-    animation: none;
+    animation: none; /* Deshabilita la animación de gradiente. */
   }
 }
 
@@ -205,63 +205,64 @@ input:focus-visible {
    RESPONSIVE TYPOGRAPHY
    ========================================================================== */
 
-/* Escalado fluido de tipografía */
+/* Escalado fluido de tipografía: Utiliza la función clamp() para un tamaño de fuente responsivo. */
 .text-fluid-sm {
-  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1rem); /* Tamaño de fuente pequeño que se adapta al viewport. */
 }
 
 .text-fluid-base {
-  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem); /* Tamaño de fuente base que se adapta al viewport. */
 }
 
 .text-fluid-lg {
-  font-size: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  font-size: clamp(1.125rem, 1rem + 0.625vw, 1.25rem); /* Tamaño de fuente grande que se adapta al viewport. */
 }
 
 .text-fluid-xl {
-  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem); /* Tamaño de fuente extra grande que se adapta al viewport. */
 }
 
 .text-fluid-2xl {
-  font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem); /* Tamaño de fuente 2xl que se adapta al viewport. */
 }
 
 .text-fluid-3xl {
-  font-size: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem);
+  font-size: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem); /* Tamaño de fuente 3xl que se adapta al viewport. */
 }
 
 /* ==========================================================================
    MEJORAS DE RENDIMIENTO
    ========================================================================== */
 
-/* Hardware acceleration para elementos animados */
+/* Hardware acceleration para elementos animados: Sugiere al navegador que use la GPU para animaciones. */
 .will-change-transform {
-  will-change: transform;
+  will-change: transform; /* Indica que la propiedad 'transform' cambiará. */
 }
 
 .will-change-opacity {
-  will-change: opacity;
+  will-change: opacity; /* Indica que la propiedad 'opacity' cambiará. */
 }
 
-/* Contenido multimedia responsivo */
+/* Contenido multimedia responsivo: Asegura que imágenes y videos se adapten al tamaño del contenedor. */
 img, video {
-  height: auto;
-  max-width: 100%;
+  height: auto; /* Altura automática para mantener la proporción. */
+  max-width: 100%; /* Ancho máximo del 100% del contenedor. */
 }
 
-/* Optimización de fuentes */
+/* Optimización de fuentes: Define la fuente Inter con carga optimizada. */
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/fonts/inter-var.woff2') format('woff2');
+  font-family: 'Inter'; /* Nombre de la familia de fuentes. */
+  font-style: normal; /* Estilo normal. */
+  font-weight: 100 900; /* Rango de pesos de fuente disponibles. */
+  font-display: swap; /* Estrategia de visualización de la fuente. */
+  src: url('/fonts/inter-var.woff2') format('woff2'); /* Ruta y formato de la fuente. */
 }
 
 /* ==========================================================================
    DARK MODE (preparado para futuras implementaciones)
    ========================================================================== */
 
+/* Variables de color para el modo oscuro: Sobrescribe los colores grises para un tema oscuro. */
 .theme-dark {
   --gray-50: #1f2937;
   --gray-100: #111827;
@@ -281,28 +282,28 @@ img, video {
 
 @media print {
   * {
-    background: transparent !important;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
+    background: transparent !important; /* Fondo transparente al imprimir. */
+    color: black !important; /* Color de texto negro al imprimir. */
+    box-shadow: none !important; /* Sin sombras al imprimir. */
+    text-shadow: none !important; /* Sin sombras de texto al imprimir. */
   }
   
   body {
-    font-size: 12pt;
-    line-height: 1.4;
+    font-size: 12pt; /* Tamaño de fuente para impresión. */
+    line-height: 1.4; /* Altura de línea para impresión. */
   }
   
   h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
+    page-break-after: avoid; /* Evita saltos de página después de los encabezados. */
   }
   
   p, li {
-    orphans: 3;
-    widows: 3;
+    orphans: 3; /* Mínimo de líneas de un párrafo que deben aparecer al final de una página. */
+    widows: 3; /* Mínimo de líneas de un párrafo que deben aparecer al principio de una página. */
   }
   
   .no-print {
-    display: none !important;
+    display: none !important; /* Oculta elementos con la clase 'no-print' al imprimir. */
   }
 }
 
@@ -310,175 +311,175 @@ img, video {
    CUSTOM SCROLLBAR
    ========================================================================== */
 
-/* Webkit browsers */
+/* Webkit browsers: Estilos personalizados para la barra de desplazamiento en navegadores WebKit. */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 8px; /* Ancho de la barra de desplazamiento vertical. */
+  height: 8px; /* Alto de la barra de desplazamiento horizontal. */
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--gray-100);
-  border-radius: 4px;
+  background: var(--gray-100); /* Color de fondo de la pista de la barra de desplazamiento. */
+  border-radius: 4px; /* Bordes redondeados para la pista. */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-400);
-  border-radius: 4px;
-  transition: background var(--transition-fast);
+  background: var(--gray-400); /* Color del "pulgar" de la barra de desplazamiento. */
+  border-radius: 4px; /* Bordes redondeados para el pulgar. */
+  transition: background var(--transition-fast); /* Transición suave para el color del pulgar. */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gray-500);
+  background: var(--gray-500); /* Color del pulgar al pasar el ratón. */
 }
 
-/* Firefox */
+/* Firefox: Estilos personalizados para la barra de desplazamiento en Firefox. */
 html {
-  scrollbar-width: thin;
-  scrollbar-color: var(--gray-400) var(--gray-100);
+  scrollbar-width: thin; /* Ancho delgado de la barra de desplazamiento. */
+  scrollbar-color: var(--gray-400) var(--gray-100); /* Color del pulgar y de la pista. */
 }
 
 /* ==========================================================================
    ANIMACIONES PERSONALIZADAS
    ========================================================================== */
 
-/* Fade in animation */
+/* Fade in animation: Animación de aparición con desplazamiento. */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; /* Inicialmente invisible. */
+    transform: translateY(20px); /* Desplazado 20px hacia abajo. */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Completamente visible. */
+    transform: translateY(0); /* En su posición original. */
   }
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards; /* Aplica la animación fadeIn. */
 }
 
-/* Slide in from right */
+/* Slide in from right: Animación de entrada desde la derecha. */
 @keyframes slideInRight {
   from {
-    opacity: 0;
-    transform: translateX(30px);
+    opacity: 0; /* Inicialmente invisible. */
+    transform: translateX(30px); /* Desplazado 30px hacia la derecha. */
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1; /* Completamente visible. */
+    transform: translateX(0); /* En su posición original. */
   }
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.5s ease-out forwards;
+  animation: slideInRight 0.5s ease-out forwards; /* Aplica la animación slideInRight. */
 }
 
-/* Pulse animation for breaking news */
+/* Pulse animation for breaking news: Animación de pulso para noticias de última hora. */
 @keyframes pulse {
   0%, 100% {
-    opacity: 1;
+    opacity: 1; /* Opacidad normal. */
   }
   50% {
-    opacity: 0.7;
+    opacity: 0.7; /* Opacidad reducida a la mitad de la animación. */
   }
 }
 
 .animate-pulse-slow {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* Aplica la animación de pulso infinita. */
 }
 
-/* Bounce animation for notifications */
+/* Bounce animation for notifications: Animación de rebote para notificaciones. */
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    transform: translateY(-25%); /* Desplazamiento hacia arriba. */
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1); /* Función de temporización para el rebote. */
   }
   50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transform: translateY(0); /* Vuelve a la posición original. */
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1); /* Función de temporización para el rebote. */
   }
 }
 
 .animate-bounce-once {
-  animation: bounce 1s ease-in-out 1;
+  animation: bounce 1s ease-in-out 1; /* Aplica la animación de rebote una sola vez. */
 }
 
 /* ==========================================================================
    UTILIDADES ESPECÍFICAS PARA NOTICIAS
    ========================================================================== */
 
-/* Badge de categoría con colores específicos */
+/* Badge de categoría con colores específicos: Estilos para insignias de categoría con gradientes de color. */
 .badge-internacional {
-  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  background: linear-gradient(135deg, #3b82f6, #1e40af); /* Gradiente azul. */
 }
 
 .badge-economia {
-  background: linear-gradient(135deg, #10b981, #047857);
+  background: linear-gradient(135deg, #10b981, #047857); /* Gradiente verde. */
 }
 
 .badge-deportes {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: linear-gradient(135deg, #f59e0b, #d97706); /* Gradiente naranja. */
 }
 
 .badge-sociedad {
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed); /* Gradiente morado. */
 }
 
 .badge-ciencia {
-  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  background: linear-gradient(135deg, #06b6d4, #0891b2); /* Gradiente cian. */
 }
 
 .badge-cultura {
-  background: linear-gradient(135deg, #ec4899, #be185d);
+  background: linear-gradient(135deg, #ec4899, #be185d); /* Gradiente rosa. */
 }
 
 .badge-tecnologia {
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  background: linear-gradient(135deg, #6366f1, #4f46e5); /* Gradiente índigo. */
 }
 
-/* Estados de carga */
+/* Estados de carga: Estilos para un efecto de carga con brillo. */
 .loading-state {
-  position: relative;
-  overflow: hidden;
+  position: relative; /* Establece el contexto de posicionamiento. */
+  overflow: hidden; /* Oculta el contenido que se desborda. */
 }
 
 .loading-state::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  animation: shimmer 1.5s infinite;
+  content: ''; /* Contenido vacío para el pseudo-elemento. */
+  position: absolute; /* Posiciona el pseudo-elemento de forma absoluta. */
+  top: 0; /* Alineado arriba. */
+  left: -100%; /* Inicialmente fuera de la vista a la izquierda. */
+  width: 100%; /* Ocupa todo el ancho. */
+  height: 100%; /* Ocupa toda la altura. */
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); /* Gradiente transparente a blanco semitransparente. */
+  animation: shimmer 1.5s infinite; /* Aplica la animación de brillo. */
 }
 
 @keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% { left: -100%; } /* Comienza fuera de la vista a la izquierda. */
+  100% { left: 100%; } /* Termina fuera de la vista a la derecha. */
 }
 
 /* ==========================================================================
    BREAKPOINTS PERSONALIZADOS
    ========================================================================== */
 
-/* Muy pequeño (móviles en landscape) */
+/* Muy pequeño (móviles en landscape): Ajustes de tipografía para pantallas pequeñas. */
 @media (min-width: 480px) {
-  .text-fluid-sm { font-size: clamp(0.875rem, 0.85rem + 0.25vw, 1rem); }
+  .text-fluid-sm { font-size: clamp(0.875rem, 0.85rem + 0.25vw, 1rem); } /* Ajusta el tamaño de fuente. */
 }
 
-/* Tabletas pequeñas */
+/* Tabletas pequeñas: Ajustes de contenedor para tabletas. */
 @media (min-width: 640px) {
   .container-custom {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    max-width: 640px; /* Ancho máximo del contenedor. */
+    margin-left: auto; /* Centra el contenedor. */
+    margin-right: auto; /* Centra el contenedor. */
+    padding-left: 1rem; /* Padding izquierdo. */
+    padding-right: 1rem; /* Padding derecho. */
   }
 }
 
-/* Tabletas medianas */
+/* Tabletas medianas: Ajustes de contenedor para tabletas medianas. */
 @media (min-width: 768px) {
   .container-custom {
     max-width: 768px;
@@ -487,7 +488,7 @@ html {
   }
 }
 
-/* Laptops */
+/* Laptops: Ajustes de contenedor para laptops. */
 @media (min-width: 1024px) {
   .container-custom {
     max-width: 1024px;
@@ -496,14 +497,14 @@ html {
   }
 }
 
-/* Desktops */
+/* Desktops: Ajustes de contenedor para desktops. */
 @media (min-width: 1280px) {
   .container-custom {
     max-width: 1280px;
   }
 }
 
-/* Pantallas muy grandes */
+/* Pantallas muy grandes: Ajustes de contenedor para pantallas muy grandes. */
 @media (min-width: 1536px) {
   .container-custom {
     max-width: 1536px;
@@ -514,102 +515,102 @@ html {
    MICROINTERACCIONES
    ========================================================================== */
 
-/* Efecto ripple para botones */
+/* Efecto ripple para botones: Animación de onda al hacer clic en un botón. */
 .ripple {
-  position: relative;
-  overflow: hidden;
+  position: relative; /* Establece el contexto de posicionamiento. */
+  overflow: hidden; /* Oculta el contenido que se desborda. */
 }
 
 .ripple::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  content: ''; /* Contenido vacío para el pseudo-elemento. */
+  position: absolute; /* Posiciona el pseudo-elemento de forma absoluta. */
+  top: 50%; /* Centrado verticalmente. */
+  left: 50%; /* Centrado horizontalmente. */
+  width: 0; /* Ancho inicial cero. */
+  height: 0; /* Alto inicial cero. */
+  border-radius: 50%; /* Forma circular. */
+  background: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente. */
+  transform: translate(-50%, -50%); /* Centra el círculo. */
+  transition: width 0.6s, height 0.6s; /* Transición para el tamaño del círculo. */
 }
 
 .ripple:active::after {
-  width: 300px;
-  height: 300px;
+  width: 300px; /* Ancho final del círculo al hacer clic. */
+  height: 300px; /* Alto final del círculo al hacer clic. */
 }
 
-/* Efecto de escritura para títulos */
+/* Efecto de escritura para títulos: Animación que simula la escritura de texto. */
 .typewriter {
-  overflow: hidden;
-  border-right: 2px solid var(--primary-blue);
-  white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  overflow: hidden; /* Oculta el texto que se desborda. */
+  border-right: 2px solid var(--primary-blue); /* Borde derecho que simula el cursor. */
+  white-space: nowrap; /* Evita el salto de línea. */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; /* Aplica las animaciones de escritura y parpadeo del cursor. */
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from { width: 0; } /* Comienza con ancho cero. */
+  to { width: 100%; } /* Termina con ancho completo. */
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: var(--primary-blue); }
+  from, to { border-color: transparent; } /* El cursor es transparente al inicio y al final. */
+  50% { border-color: var(--primary-blue); } /* El cursor es visible a la mitad de la animación. */
 }
 
 /* ==========================================================================
    ESTADOS DE INTERACCIÓN AVANZADOS
    ========================================================================== */
 
-/* Estados de hover con transiciones suaves */
+/* Estados de hover con transiciones suaves: Efecto de elevación al pasar el ratón. */
 .hover-lift {
-  transition: all var(--transition-normal);
-  transform-origin: center;
+  transition: all var(--transition-normal); /* Transición suave para todas las propiedades. */
+  transform-origin: center; /* El origen de la transformación es el centro. */
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px) scale(1.02); /* Desplazamiento hacia arriba y ligero aumento de tamaño al pasar el ratón. */
+  box-shadow: var(--shadow-xl); /* Aplica una sombra más grande al pasar el ratón. */
 }
 
-/* Estados de focus personalizados */
+/* Estados de focus personalizados: Estilos para el anillo de enfoque. */
 .focus-ring {
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast); /* Transición rápida para todas las propiedades. */
 }
 
 .focus-ring:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  border-color: var(--primary-blue);
+  outline: none; /* Elimina el contorno por defecto. */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); /* Sombra que simula un anillo de enfoque. */
+  border-color: var(--primary-blue); /* Color del borde al enfocar. */
 }
 
-/* Estados de active */
+/* Estados de active: Efecto de escala al hacer clic. */
 .active-scale:active {
-  transform: scale(0.98);
-  transition: transform 0.1s ease-in-out;
+  transform: scale(0.98); /* Reduce ligeramente el tamaño al hacer clic. */
+  transition: transform 0.1s ease-in-out; /* Transición rápida para el efecto de escala. */
 }
 
 /* ==========================================================================
    OPTIMIZACIONES FINALES
    ========================================================================== */
 
-/* Prevenir FOUC (Flash of Unstyled Content) */
+/* Prevenir FOUC (Flash of Unstyled Content): Oculta el contenido sin estilo hasta que se cargue el CSS. */
 .no-js {
-  display: none;
+  display: none; /* Oculta elementos con la clase 'no-js'. */
 }
 
-/* Lazy loading support */
+/* Lazy loading support: Estilos para imágenes con carga perezosa. */
 img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.3s;
+  opacity: 0; /* Inicialmente invisible. */
+  transition: opacity 0.3s; /* Transición suave para la opacidad. */
 }
 
 img[loading="lazy"].loaded {
-  opacity: 1;
+  opacity: 1; /* Completamente visible cuando la imagen está cargada. */
 }
 
-/* Contenido crítico above-the-fold */
+/* Contenido crítico above-the-fold: Optimiza el renderizado del contenido visible inicialmente. */
 .critical-content {
-  contain: layout style paint;
+  contain: layout style paint; /* Aísla el renderizado del elemento para mejorar el rendimiento. */
 }
 
 /* ==========================================================================
@@ -617,9 +618,9 @@ img[loading="lazy"].loaded {
    ========================================================================== */
 
 .theme-light {
-  color-scheme: light;
+  color-scheme: light; /* Indica al navegador que el tema es claro. */
 }
 
 .theme-dark {
-  color-scheme: dark;
+  color-scheme: dark; /* Indica al navegador que el tema es oscuro. */
 }

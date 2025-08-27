@@ -1,1 +1,1 @@
-/// <reference types="vite/client" />
+/// <reference types="vite/client" /> // Esta línea es una directiva de referencia de TypeScript que indica al compilador que incluya las definiciones de tipos proporcionadas por Vite para el entorno del cliente. Esto proporciona autocompletado y comprobación de tipos para las variables de entorno de Vite (como `import.meta.env.VITE_APP_TITLE`) y otras utilidades específicas de Vite en el código del cliente.

@@ -1,106 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Configuración básica -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Configuración básica del documento HTML -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento como UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la ventana de visualización para dispositivos móviles. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Asegura la compatibilidad con las últimas versiones de Internet Explorer. -->
     
-    <!-- SEO básico -->
-    <title>Noticias Hoy - Actualidad, Internacional y Política</title>
-    <meta name="description" content="Mantente informado con las últimas noticias de España e internacional. Política, economía, deportes, cultura y actualidad las 24 horas.">
-    <meta name="keywords" content="noticias, actualidad, internacional, política, economía, deportes, cultura, España, mundo, breaking news">
-    <meta name="author" content="Noticias Hoy">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="Spanish">
+    <!-- SEO básico: Metadatos para motores de búsqueda y redes sociales -->
+    <title>Noticias Hoy - Actualidad, Internacional y Política</title> <!-- Título de la página que aparece en la pestaña del navegador y en los resultados de búsqueda. -->
+    <meta name="description" content="Mantente informado con las últimas noticias de España e internacional. Política, economía, deportes, cultura y actualidad las 24 horas."> <!-- Descripción corta de la página para SEO. -->
+    <meta name="keywords" content="noticias, actualidad, internacional, política, economía, deportes, cultura, España, mundo, breaking news"> <!-- Palabras clave relevantes para el contenido de la página. -->
+    <meta name="author" content="Noticias Hoy"> <!-- Nombre del autor o de la organización. -->
+    <meta name="robots" content="index, follow"> <!-- Indica a los motores de búsqueda que indexen la página y sigan los enlaces. -->
+    <meta name="language" content="Spanish"> <!-- Idioma principal del contenido de la página. -->
     
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Noticias Hoy">
-    <meta property="og:title" content="Noticias Hoy - Actualidad, Internacional y Política">
-    <meta property="og:description" content="Mantente informado con las últimas noticias de España e internacional. Política, economía, deportes, cultura y actualidad las 24 horas.">
-    <meta property="og:url" content="https://www.noticiashoy.com">
-    <meta property="og:image" content="https://www.noticiashoy.com/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="es_ES">
+    <!-- Open Graph para redes sociales (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website"> <!-- Tipo de contenido (en este caso, un sitio web). -->
+    <meta property="og:site_name" content="Noticias Hoy"> <!-- Nombre del sitio web. -->
+    <meta property="og:title" content="Noticias Hoy - Actualidad, Internacional y Política"> <!-- Título que se mostrará en las redes sociales. -->
+    <meta property="og:description" content="Mantente informado con las últimas noticias de España e internacional. Política, economía, deportes, cultura y actualidad las 24 horas."> <!-- Descripción que se mostrará en las redes sociales. -->
+    <meta property="og:url" content="https://www.noticiashoy.com"> <!-- URL canónica de la página. -->
+    <meta property="og:image" content="https://www.noticiashoy.com/og-image.jpg"> <!-- URL de la imagen que se mostrará en las redes sociales. -->
+    <meta property="og:image:width" content="1200"> <!-- Ancho de la imagen Open Graph. -->
+    <meta property="og:image:height" content="630"> <!-- Alto de la imagen Open Graph. -->
+    <meta property="og:locale" content="es_ES"> <!-- Configuración regional de Open Graph. -->
     
-    <!-- Twitter/X Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@noticiashoy">
-    <meta name="twitter:creator" content="@noticiashoy">
-    <meta name="twitter:title" content="Noticias Hoy - Actualidad, Internacional y Política">
-    <meta name="twitter:description" content="Mantente informado con las últimas noticias de España e internacional. Política, economía, deportes, cultura y actualidad las 24 horas.">
-    <meta name="twitter:image" content="https://www.noticiashoy.com/twitter-image.jpg">
+    <!-- Twitter/X Cards para redes sociales (Twitter/X) -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Tipo de tarjeta de Twitter (imagen grande con resumen). -->
+    <meta name="twitter:site" content="@noticiashoy"> <!-- Cuenta de Twitter del sitio. -->
+    <meta name="twitter:creator" content="@noticiashoy"> <!-- Cuenta de Twitter del creador del contenido. -->
+    <meta name="twitter:title" content="Noticias Hoy - Actualidad, Internacional y Política"> <!-- Título que se mostrará en Twitter. -->
+    <meta name="twitter:description" content="Mantente informado con las últimas noticias de España e internacional. Política, economía, deportes, cultura y actualidad las 24 horas."> <!-- Descripción que se mostrará en Twitter. -->
+    <meta name="twitter:image" content="https://www.noticiashoy.com/twitter-image.jpg"> <!-- URL de la imagen que se mostrará en Twitter. -->
     
-    <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Favicons: Iconos del sitio web para diferentes contextos -->
+    <link rel="icon" href="/favicon.ico" sizes="any"> <!-- Icono de la página en formato ICO. -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <!-- Icono de la página en formato SVG. -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <!-- Icono para dispositivos Apple. -->
     
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json">
+    <!-- PWA Manifest: Archivo de manifiesto para Progressive Web Apps -->
+    <link rel="manifest" href="/manifest.json"> <!-- Enlace al archivo manifest.json para la PWA. -->
     
-    <!-- DNS Prefetch y Preconnect para optimización -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
+    <!-- DNS Prefetch y Preconnect para optimización de rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconecta con el dominio de Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconecta con el dominio de Google Fonts para recursos estáticos. -->
+    <link rel="preconnect" href="https://images.unsplash.com"> <!-- Preconecta con el dominio de Unsplash para imágenes. -->
     
-    <!-- Tipografía optimizada -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tipografía optimizada: Enlace a fuentes externas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> <!-- Importa la fuente Inter de Google Fonts. -->
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.noticiashoy.com">
+    <!-- Canonical URL: URL preferida para evitar contenido duplicado -->
+    <link rel="canonical" href="https://www.noticiashoy.com"> <!-- Define la URL canónica de la página. -->
     
-    <!-- Structured Data básico -->
+    <!-- Structured Data básico (Schema.org): Datos estructurados para mejorar la visibilidad en búsquedas -->
     <script type="application/ld+json">
+    // Define datos estructurados en formato JSON-LD para una organización de medios de noticias.
     {
-        "@context": "https://schema.org",
-        "@type": "NewsMediaOrganization",
-        "name": "Noticias Hoy",
-        "url": "https://www.noticiashoy.com",
-        "logo": "https://www.noticiashoy.com/logo.png",
-        "foundingDate": "2025-01-01",
-        "description": "Portal de noticias español con cobertura 24/7 de actualidad nacional e internacional",
-        "sameAs": [
+        "@context": "https://schema.org", // Especifica el vocabulario de Schema.org.
+        "@type": "NewsMediaOrganization", // Define el tipo de entidad como una organización de medios de noticias.
+        "name": "Noticias Hoy", // Nombre de la organización.
+        "url": "https://www.noticiashoy.com", // URL principal de la organización.
+        "logo": "https://www.noticiashoy.com/logo.png", // URL del logo de la organización.
+        "foundingDate": "2025-01-01", // Fecha de fundación de la organización.
+        "description": "Portal de noticias español con cobertura 24/7 de actualidad nacional e internacional", // Descripción de la organización.
+        "sameAs": [ // Enlaces a perfiles de la organización en redes sociales.
             "https://twitter.com/noticiashoy",
             "https://facebook.com/noticiashoy",
             "https://instagram.com/noticiashoy"
         ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+34-900-000-000",
-            "contactType": "customer service",
-            "availableLanguage": "Spanish"
+        "contactPoint": { // Información de contacto de la organización.
+            "@type": "ContactPoint", // Tipo de punto de contacto.
+            "telephone": "+34-900-000-000", // Número de teléfono de contacto.
+            "contactType": "customer service", // Tipo de contacto (servicio al cliente).
+            "availableLanguage": "Spanish" // Idioma disponible para el contacto.
         }
     }
     </script>
     
-    <!-- Theme color para navegadores móviles -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="msapplication-TileColor" content="#2563eb">
-    <meta name="msapplication-navbutton-color" content="#2563eb">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Theme color para navegadores móviles: Personaliza la barra de direcciones del navegador -->
+    <meta name="theme-color" content="#2563eb"> <!-- Color del tema para navegadores móviles. -->
+    <meta name="msapplication-TileColor" content="#2563eb"> <!-- Color del mosaico para Windows Phone. -->
+    <meta name="msapplication-navbutton-color" content="#2563eb"> <!-- Color del botón de navegación para Windows Phone. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"> <!-- Estilo de la barra de estado para iOS. -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Permite que la aplicación web se ejecute en modo de pantalla completa en iOS. -->
     
-    <!-- Preload crítico -->
-    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload crítico: Carga anticipada de recursos importantes -->
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin> <!-- Precarga la fuente Inter para un renderizado más rápido. -->
     
-    <!-- Performance hints -->
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <!-- Performance hints: Sugerencias de rendimiento para el navegador -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com"> <!-- Realiza una precarga de DNS para Google Analytics. -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com"> <!-- Realiza una precarga de DNS para Google Fonts. -->
 </head>
 
 <body class="theme-light antialiased">
-    <!-- Skip to content para accesibilidad -->
+    <!-- Skip to content para accesibilidad: Enlace para saltar directamente al contenido principal -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50">
         Saltar al contenido principal
     </a>
     
-    <!-- Contenedor principal para React -->
+    <!-- Contenedor principal para React: Aquí se montará la aplicación React -->
     <!-- React inyectará dinámicamente todo el contenido de la aplicación aquí -->
     <div id="root"></div>
     
+    <!-- Script principal de la aplicación, cargado como módulo para Vite -->
+    <!-- El atributo 'type="module"' permite el uso de importaciones/exportaciones de ES Modules. -->
+    <!-- El atributo 'src="/src/main.tsx"' apunta al archivo de entrada principal de la aplicación React. -->
+    <script type="module" src="/src/main.tsx"></script>
+
     <!-- Fallback para usuarios sin JavaScript habilitado -->
     <noscript>
         <div style="
